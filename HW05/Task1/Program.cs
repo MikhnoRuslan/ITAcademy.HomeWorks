@@ -5,7 +5,7 @@ namespace Task1
     class TaskOne
     {
         private const int SIZE = 5;
-        private const int _SIZE = 28;
+        private const int SIZE_LINE = 28;
         static void Main(string[] args)
         {
             int[] randomArray = new int[SIZE];
@@ -23,7 +23,7 @@ namespace Task1
 
             Console.Write($"  User array: ");
             Print(secondArray);
-            _Print(_SIZE);
+            PrintLine(SIZE_LINE);
 
             Console.Write($"Result array: ");
             ResultArray(randomArray, secondArray, resultArray);
@@ -80,7 +80,7 @@ namespace Task1
             Console.WriteLine();
         }
 
-        static void _Print(int size)
+        static void PrintLine(int size)
         {
             char line = '-';
             for (int i = 0; i < size; i++)
