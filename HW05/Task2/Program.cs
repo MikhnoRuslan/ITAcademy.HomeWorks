@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Globalization;
+using System.Linq;
 
 namespace Task2
 {
@@ -69,6 +71,7 @@ namespace Task2
                     {
                         newArray[j + 1] = arr[j];
                     }
+
                     break;
                 }
             }
