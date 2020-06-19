@@ -4,7 +4,7 @@ namespace Task1
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             Console.Write($"Enter the name of the poem: ");
             string namePoem = TheNameOrAuthorOfThePoem();
@@ -36,15 +36,13 @@ namespace Task1
             return str;
         }
 
-        static string[] Replace(string[] arr)
+        static void Replace(string[] arr)
         {
             for (int i = 0; i < arr.Length; i++)
             {
                 arr[i] = arr[i].Replace("O", "A");
                 arr[i] = arr[i].Replace("o", "a");
             }
-
-            return arr;
         }
 
         static void PrintPoem(string[] arr, string namePoem, string author)
