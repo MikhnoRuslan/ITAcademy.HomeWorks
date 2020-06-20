@@ -5,8 +5,6 @@ namespace Task3
 {
     class Program
     {
-        private const string Str = "1a!2.3!!.. 4.!.?6 7! ..?";
-
         static void Main(string[] args)
         {
             StringBuilder str = new StringBuilder("1a!2.3!!.. 4.!.?6 7! ..?");
