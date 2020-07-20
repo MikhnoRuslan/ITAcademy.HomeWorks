@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Data;
 using Microsoft.Data.SqlClient;
 using Task3.Interfaces;
 using Task3.Models;
@@ -107,7 +106,7 @@ namespace Task3.Repositories
             try
             {
                 Logger.Log.Info($"Remove data.");
-                var cmd = new SqlCommand(GetDeleteString(id), connection);
+                var cmd = new SqlCommand(GetDeleteString(), connection);
                 cmd.Parameters.AddWithValue($"@{_id}", id);
                 cmd.ExecuteNonQuery();
             }
@@ -146,7 +145,7 @@ namespace Task3.Repositories
             return $@"SELECT * FROM {_nameTable} WHERE {_id} IN (SELECT {_id} FROM {_nameTable} WHERE {_id}={idMotorcycle})";
         }
 
-        private static string GetDeleteString(string id)
+        private static string GetDeleteString()
         {
             return $"DELETE {_nameTable} WHERE {_id}=@{_id}";
         }

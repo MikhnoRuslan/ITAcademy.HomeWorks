@@ -4,7 +4,7 @@ using log4net;
 using log4net.Config;
 using log4net.Repository;
 
-namespace Task3
+namespace Task3.Models
 {
     public static class Logger
     {
